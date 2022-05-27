@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="param_file" default="$(find blinkstick_state_notifier)/config/led_notify.yaml" />
+
+    <node pkg="blinkstick_state_notifier" type="led_state_notifier_node.py" name="led_state_notifier" output="screen">
+        <rosparam file="$(arg param_file)" command="load"/>
+    </node>
+</launch>

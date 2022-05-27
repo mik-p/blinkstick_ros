@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>blinkstick_ros</name>
+  <version>0.1.0</version>
+  <description>The blinkstick_ros metapackage</description>
+
+  <maintainer email="mppritchard3@hotmail.com">mik-p</maintainer>
+
+  <license>not defined</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <exec_depend>led_notify_msgs</exec_depend>
+  <exec_depend>blinkstick_state_notifier</exec_depend>
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <metapackage />
+  </export>
+</package>

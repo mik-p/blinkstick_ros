@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>blinkstick_state_notifier</name>
+  <version>0.1.0</version>
+  <description>The blinkstick_state_notifier package</description>
+
+  <maintainer email="mppritchard3@hotmail.com">mik-p</maintainer>
+
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>rospy</depend>
+  <depend>led_notify_msgs</depend>
+
+  <export>
+  </export>
+</package>
