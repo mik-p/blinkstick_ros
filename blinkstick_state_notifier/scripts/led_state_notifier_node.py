@@ -77,6 +77,12 @@ class BlinkStickHandler(object):
         self._set_colour_w_safe_delay(
             LEDRGBA.RED_R, LEDRGBA.RED_G, LEDRGBA.RED_B)
 
+    # show error colour
+    def show_on(self):
+        rospy.logdebug("error")
+        self._set_colour_w_safe_delay(
+            LEDRGBA.RED_R, LEDRGBA.GREEN_G, LEDRGBA.BLUE_B)
+
 
 class LEDStateNotifier(BlinkStickHandler):
     def __init__(self):
@@ -108,6 +114,8 @@ class LEDStateNotifier(BlinkStickHandler):
             self.show_warning()
         elif note.alert == LEDNotify.ERROR:
             self.show_error()
+        else:
+            self.show_on()  # probably white
 
     # pop queued requests
     def pop_notice_queue_timer_cb(self, event):
